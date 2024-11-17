@@ -2320,7 +2320,7 @@ DEFINE_IMPLICATION(prof, log_code)
 
 DEFINE_BOOL(ll_prof, false, "Enable low-level linux profiler.")
 
-#if V8_OS_LINUX
+#if V8_OS_LINUX || V8_OS_DARWIN
 #define DEFINE_PERF_PROF_BOOL(nam, cmt) DEFINE_BOOL(nam, false, cmt)
 #define DEFINE_PERF_PROF_IMPLICATION DEFINE_IMPLICATION
 #else
